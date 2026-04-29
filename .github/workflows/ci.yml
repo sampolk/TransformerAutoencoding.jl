@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Julia ${{ matrix.version }} - ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        version:
+          - '1'
+          - 'lts'
+        os:
+          - ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: ${{ matrix.version }}
+
+      - name: Instantiate
+        run: julia --project=. -e 'import Pkg; Pkg.instantiate()'
+
+      - name: Run tests
+        run: julia --project=. -e 'import Pkg; Pkg.test()'
