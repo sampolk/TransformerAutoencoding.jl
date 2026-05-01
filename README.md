@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/transformerautoencoding.jl%20graphic.png" alt="TransformerAutoencoding.jl overview" width="800">
+</p>
+
 # TransformerAutoencoding.jl
 
 `TransformerAutoencoding.jl` provides sequence-to-sequence autoencoding utilities for variable-length sequence datasets in Julia, using lightweight Transformer blocks implemented in Flux. It supports training on padded minibatches with masked losses so that padding does not affect optimization.
