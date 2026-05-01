@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/transformerautoencoding.jl%20graphic.png 2" alt="TransformerAutoencoding.jl overview" width="800">
+  <img src=".github/transformerautoencoding.jl%20graphic%202.png" alt="TransformerAutoencoding.jl overview" width="800">
 </p>
 
 # TransformerAutoencoding.jl
